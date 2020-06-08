@@ -1,0 +1,18 @@
+$mauve: #c39aa5;
+$mauve: #c39aa5;
+$dark-pink:#ddaeae;
+$light-pink:#edc6bb;
+$baby: #fedcc8;
+$cream:#fef2dc;
+$baby-blue:#99c6d9;
+$dark-blue:#407290;
+$purple:#817985;
+.colorblock{
+    position: absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:500px;
+    background-color:$baby;
+    z-index: -1;
+}

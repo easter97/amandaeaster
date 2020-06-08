@@ -1,0 +1,45 @@
+$mauve: #c39aa5;
+$dark-pink:#ddaeae;
+$light-pink:#edc6bb;
+$baby: #fedcc8;
+$cream:#fef2dc;
+$baby-blue:#99c6d9;
+$dark-blue:#407290;
+$purple:#817985;
+.about-card{
+    margin:0 100px 0 100px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color:$cream;
+    border-radius:12px 12px 0 0;
+    .landscape-photo{
+        height:250px;
+        width:316px;
+        margin:10px;
+    }
+    .title{
+        font-family: 'Arvo', serif;
+        font-size:40px;
+        text-align: center;
+    }
+    .content{
+        padding:20px;
+        p{
+            line-height: 35px;
+            text-align: justify;
+        }
+        flex:2;
+    }
+   
+}
+.sub-content{
+    margin:0 100px 0 100px;
+    background-color: $cream;
+        border-radius: 0 0 12px 12px;
+        padding:15px;
+
+    p{
+        line-height: 35px;
+        text-align: justify;
+    }
+}

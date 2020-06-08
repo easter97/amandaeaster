@@ -1,0 +1,112 @@
+$mauve: #c39aa5;
+$dark-pink:#ddaeae;
+$light-pink:#edc6bb;
+$baby: #fedcc8;
+$cream:#fef2dc;
+$baby-blue:#99c6d9;
+$dark-blue:#407290;
+$purple:#817985;
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+nav {
+    &.primary-navigation {
+      margin: 0 auto;
+      display: block;
+    
+      padding: 50px 0 50px 0;  
+      text-align: center;
+      font-size: 16px;
+  
+      ul li {
+        list-style: none;
+        margin: 0 auto;
+        border-left: 2px solid $purple;
+        display: inline-block;
+        padding: 0 30px;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        font-family: 'Arvo', serif;
+        width:90px;
+      }
+      .projects{
+        border-right: 2px solid $purple;
+      }
+      .site-title{
+        margin: 0 auto;
+        display: inline-block;
+        padding: 0 30px;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        font-family: 'Arvo', serif;
+        font-size:25px;
+      }
+  
+      li a {
+        color: black;
+      }
+  
+      li a:hover {
+        color: $mauve;
+      }
+      li a.is-active{
+          color:$dark-blue;
+      }
+  
+      li:hover {
+        cursor: pointer;
+      }
+  
+      ul li ul {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+  padding-left: 0;
+        left: 0;
+        display: none;
+        // background: white;
+      }
+  
+      ul li:hover > ul,
+      ul li ul:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        min-width: 250px;
+        text-align: left;
+        padding-top: 20px;
+        // box-shadow: 0px 3px 5px -1px #ccc;
+      }
+  
+      ul li ul li {
+        clear: both;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+        border-style: none;
+      }
+  
+      ul li ul li a:hover {
+        padding-left: 10px;
+        border-left: 2px solid $mauve;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+  
+  a {
+  
+      text-decoration: none;
+  
+      &:hover {
+          color: $mauve;
+      }
+   
+  }
+  
+   ul li ul li a { transition: all 0.5s ease; }
+  
+  .fa{
+      padding-left:5px;
+  }

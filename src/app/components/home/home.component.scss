@@ -1,0 +1,104 @@
+$mauve: #c39aa5;
+$dark-pink:#ddaeae;
+$light-pink:#edc6bb;
+$baby: #fedcc8;
+$cream:#fef2dc;
+$baby-blue:#99c6d9;
+$dark-blue:#407290;
+$purple:#817985;
+
+.container{
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.photo{
+    height:400px;
+    margin:10px;
+}
+.desc{
+    height:400px;
+    margin:10px;
+    padding:20px;
+    font-size:35px;
+    text-align: center;
+    
+    h3{
+        font-family: "Quicksand", sans-serif;
+        margin:10px;
+    }
+}
+.site-desc{
+    text-align: center;
+    padding:50px;
+}
+.big-link{
+    font-family: "Arvo", serif;
+    font-size: 40px;
+    text-decoration: none;
+    display: block;
+    color:black;
+    width: fit-content;
+    position: relative;
+    text-align: center;
+    padding:0 10px 0 10px;
+    margin:auto;
+    margin-top:25px;
+    margin-bottom:25px;
+    transition: all .2s ease-in-out;
+    .streak{
+        width:calc(98% + 10px);
+        height:15px;
+        
+        position: absolute;
+        z-index: -1;
+        top:30px;
+        left:-5px;
+        &.blue{
+            background-color:$baby-blue;
+        }
+        &.mauve{
+            background-color:$mauve;
+        }
+        &.orange{
+            background-color: #c79357;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.25, 1.25);
+    }
+}
+.about-me{
+    background-color: $cream;
+    text-align: center;
+    padding:50px;
+    .desc{
+        width:600px;
+        h1{
+            font-size: 45px;
+        }
+        h6{
+            margin:0;
+        }
+        p{
+            
+            line-height:35px;
+        }
+    }
+}
+.links{
+    margin:45px;
+}
+.about-button{
+    background-color: black;
+    color:$cream;
+    font-size: 25px;
+    text-decoration: none;
+    padding:10px 20px 10px 20px;
+    &:hover{
+        cursor: pointer;
+        background-color: $dark-blue;
+    }
+}

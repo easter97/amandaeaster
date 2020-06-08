@@ -1,0 +1,94 @@
+
+<div class="container">
+  <div class="header">
+    <div class="full-name">
+      <span class="first-name">Amanda</span> 
+      <span class="last-name">Easter</span>
+    </div>
+    <div class="contact-info">
+      <span class="email">Email: </span>
+      <span class="email-val">me@amandaeaster.com</span>
+      <span class="separator"></span>
+      <span class="phone">Phone: </span>
+      <span class="phone-val">254-723-3045</span>
+    </div>
+    
+    <div class="about">
+      <span class="position">Profile: </span>
+      <span class="desc">
+          Front-end developer with experience in Angular and proficiencies in Javascript, HTML, and CSS. Detail-oriented with a passion for UX design. Excellent written and verbal communication skills; capable of explaining complex technical issues in easy-to-understand terms. Quick learner with new languages and frameworks.
+      </span>
+    </div>
+  </div>
+   <div class="details">
+    <div class="section">
+      <div class="section__title">Experience</div>
+      <div class="section__list">
+        <div class="section__list-item">
+          <div class="job">
+            <div class=position>Software Developer Engineer</div> @ <div class="name">Citibank</div>
+            <div class="duration">July 2019 - Present</div>
+            <div class="addr">Irving, TX</div>
+          </div>
+          <div class="description">
+            
+            <div class="desc">Angular development for various internal and external teams. Work with graphing libraries and visualization as well as creation and support of common components for consumption by other Angular teams.</div>
+          </div>
+        </div>
+        <div class="section__list-item">
+            <div class="job">
+              <div class=position>Head of Web Development</div> @ <div class="name">Dunkin & Associates</div>
+              <div class="duration">Aug 2017 - May 2019</div>
+              <div class="addr">College Station, TX</div>
+            </div>
+            <div class="description">
+              <div class="desc">Managed a web development team, held weekly meetings, handled UX and UI requirements and design, managed and maintained site database.</div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <div class="section">
+      <div class="section__title">Education</div>
+      <div class="section__list">
+        <div class="section__list-item">
+            <div class="education">
+              <div class=college>Dwight Look College of Engineering</div> @ <div class="name">Texas A&M University</div>
+              <div class="duration">Aug 2015 - May 2019</div>
+            </div>
+            <div class="description">
+              <div class="desc"><span class=GPA>GPA: 3.072</span><span class=GPA>GPR: 3.033</span></div>
+            </div>
+          </div>
+
+      </div>
+      
+  </div>
+     <div class="section">
+      <div class="section__title">Projects</div> 
+       <div class="section__list">
+         <div class="section__list-item">
+           <div class="name">Spotify Comparison</div>
+           <div class="text">Angular application that utilizes Spotify's developer API to allow two Spotify users to compare playlist and returns a score of compatibility in songs, artists, and genres</div>
+         </div>
+         
+         </div>
+       </div>
+    
+     <div class="section">
+       <div class="section__title">Skills</div>
+       <div class="skills">
+           <div class= skill *ngFor="let skill of skills">{{skill}}</div>
+         
+       </div>
+     <div class="section">
+     <div class="section__title">
+       Interests
+       </div>
+       <div class="interests">
+        <div class= interest *ngFor="let interest of interests">{{interest}}</div>
+       </div>
+     </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+$mauve: #c39aa5;
+$dark-pink:#ddaeae;
+$light-pink:#edc6bb;
+$baby: #fedcc8;
+$cream:#fef2dc;
+$baby-blue:#99c6d9;
+$dark-blue:#407290;
+$purple:#817985;
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $baby
+}
+
+.milk-404 {
+  max-height: 100vh;
+}
+
+#mouth-frown{
+  visibility: hidden;
+}
+
+a {
+  font-family: sans-serif;
+  font-size: .8em;
+  padding: 10px;
+}
+.container{
+    background-color: $baby;
+}

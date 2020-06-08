@@ -1,0 +1,50 @@
+$mauve: #c39aa5;
+$dark-pink:#ddaeae;
+$light-pink:#edc6bb;
+$baby: #fedcc8;
+$cream:#fef2dc;
+$baby-blue:#99c6d9;
+$dark-blue:#407290;
+$purple:#817985;
+.project{
+    display: flex;
+    flex-wrap: wrap;
+    margin:50px 200px 50px 200px;
+    background-color: $cream;
+    padding:35px;
+    border-radius:12px;
+    .project-content{
+        flex:2;
+        .project-title{
+            font-family:'Arvo', serif;
+            font-size:25px;
+            margin-bottom:25px;
+            .collaborative{
+                float: right;
+                font-size: 15px;
+                color:$mauve;
+            }
+        }
+        .description{
+            font-size:20px;
+        }
+        .project-link{
+            display: block;
+            margin:10px;
+            font-size:20px;
+            color:$purple;
+            text-decoration: none;
+            &:hover{
+                color:$dark-blue;
+                cursor: pointer;
+            }
+        }
+    }
+    .project-icon{
+        flex:1;
+        max-width:150px;
+        height: 150px;
+        margin:0px 50px 0px 50px;
+        border-radius:10px;
+    }
+}
