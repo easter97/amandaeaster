@@ -31,6 +31,9 @@ nav {
         text-align: center;
         font-family: 'Arvo', serif;
         width:90px;
+        &:first-child{
+          border-left: none;
+        }
       }
       .projects{
         border-right: 2px solid $purple;
