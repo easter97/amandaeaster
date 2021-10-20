@@ -3,6 +3,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+$mauve: #c39aa5;
+$dark-pink:#ddaeae;
+$light-pink:#edc6bb;
+$baby: #fedcc8;
+$cream:#fef2dc;
+$baby-blue:#99c6d9;
+$dark-blue:#407290;
+$purple:#817985;
 
 html,body,p{
     // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -15,4 +23,41 @@ p{
 }
 h1{
     font-family: "Arvo", serif;
+}
+.big-link{
+    font-family: "Arvo", serif;
+    font-size: 40px;
+    text-decoration: none;
+    display: block;
+    color:black;
+    width: fit-content;
+    position: relative;
+    text-align: center;
+    padding:0 10px 0 10px;
+    margin:auto;
+    margin-top:25px;
+    margin-bottom:25px;
+    transition: all .2s ease-in-out;
+    .streak{
+        width:calc(98% + 10px);
+        height:15px;
+        
+        position: absolute;
+        z-index: -1;
+        top:30px;
+        left:-5px;
+        &.blue{
+            background-color:$baby-blue;
+        }
+        &.mauve{
+            background-color:$mauve;
+        }
+        &.orange{
+            background-color: #c79357;
+        }
+    }
+    &:hover{
+        cursor: pointer;
+        transform: scale(1.25, 1.25);
+    }
 }

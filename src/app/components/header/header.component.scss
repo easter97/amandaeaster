@@ -8,8 +8,11 @@ $dark-blue:#407290;
 $purple:#817985;
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+.mobile-header{
+  display:none;
+}
 nav {
-    &.primary-navigation {
+    &.desktop-header {
       margin: 0 auto;
       display: block;
     
@@ -65,13 +68,13 @@ nav {
   padding-left: 0;
         left: 0;
         display: none;
-        // background: white;
+        background: $baby;
       }
   
       ul li:hover > ul,
       ul li ul:hover {
         visibility: visible;
-        opacity: 1;
+        opacity: .75;
         display: block;
         min-width: 250px;
         text-align: left;
@@ -109,4 +112,30 @@ nav {
   
   .fa{
       padding-left:5px;
+  }
+  @media only screen and (max-width: 600px) {
+    .mobile-header{
+      display:block;
+    }
+    nav{
+      &.mobile-header{
+        .is-active{
+          color:$dark-blue;
+        }
+      }
+      &.desktop-header{
+        display: none;
+      }
+    }
+    .site-title{
+      // margin: 0 auto;
+      // display: inline-block;
+      // padding: 0 30px;
+      // position: relative;
+      // text-decoration: none;
+      text-align: center;
+      font-family: 'Arvo', serif;
+      font-size:40px;
+      text-align: center;
+    }
   }

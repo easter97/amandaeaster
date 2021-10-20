@@ -1,4 +1,4 @@
-<nav role="navigation" class="primary-navigation">
+<nav role="navigation" class="desktop-header">
   <ul>
     <li><a routerLink='/home' routerLinkActive="is-active">Home</a></li>
     <li class=projects><a routerLink='/projects' routerLinkActive="is-active">Projects <i class="fa fa-chevron-down"></i></a>
@@ -11,4 +11,14 @@
     <li><a routerLink='/about' routerLinkActive="is-active">About</a></li>
     <li><a routerLink='/resume' routerLinkActive="is-active">Resume</a></li>
   </ul>
+</nav>
+
+<nav role="navigation" class="mobile-header">
+  <div class=site-title>Amanda Easter</div>
+  <div class=links>
+    <a class=big-link routerLink='/home' routerLinkActive="is-active"><div class="streak orange"></div>Home</a>
+    <a class=big-link routerLink='/projects' routerLinkActive="is-active"><div class="streak mauve"></div>Projects</a>
+    <a class=big-link routerLink='/about' routerLinkActive="is-active"><div class="streak blue"></div>About Me</a>
+    <a class=big-link routerLink='/resume' routerLinkActive="is-active"><div class="streak orange"></div>Resume</a>
+</div>
 </nav>

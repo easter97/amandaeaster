@@ -9,12 +9,13 @@ $purple:#817985;
 .project{
     display: flex;
     flex-wrap: wrap;
-    margin:50px 200px 50px 200px;
+    margin:50px 10% 50px 10%;
     background-color: $cream;
     padding:35px;
     border-radius:12px;
     .project-content{
         flex:2;
+
         .project-title{
             font-family:'Arvo', serif;
             font-size:25px;
@@ -44,7 +45,34 @@ $purple:#817985;
         flex:1;
         max-width:150px;
         height: 150px;
-        margin:0px 50px 0px 50px;
         border-radius:10px;
+        margin-right:20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .project{
+        .project-content{
+            margin-top:20px;
+            .project-title{
+                font-family:'Arvo', serif;
+                font-size:25px;
+                margin-bottom:25px;
+                text-align: center;
+                .collaborative{
+                    display: block;
+                    float: none;
+                    font-size: 15px;
+                    color:$mauve;
+                    text-align: center;
+                }
+            }
+            .project-link{
+                text-align: center;
+            }
+        }
+        .project-icon{
+            margin:auto;
+        }
+        
     }
 }
