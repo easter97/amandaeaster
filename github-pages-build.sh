@@ -14,3 +14,17 @@ echo 'amandaeaster.com' > CNAME
 
 # Optional: Navigate back to the original directory
 cd -
+
+#copy the spotify side project from its dist folder
+
+# Create a new directory named 'spotify' within the 'docs' folder of the 'amandaeaster' project
+mkdir -p docs/spotify
+
+# Navigate to the Spotify side project's dist folder
+cd ../../spofity-comparison/dist/spotify-comparison
+
+# Copy all contents of the 'dist' folder into the newly created 'spotify' directory
+cp -r * ../../../amandaeaster/amandaeaster/docs/spotify
+
+# Optionally, navigate back to the original directory
+cd -
