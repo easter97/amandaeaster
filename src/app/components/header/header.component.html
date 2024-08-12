@@ -1,16 +1,20 @@
-<nav role="navigation" class="desktop-header">
-  <ul>
-    <li><a routerLink='/home' routerLinkActive="is-active">Home</a></li>
-    <li class=projects><a routerLink='/projects' routerLinkActive="is-active">Projects <i class="fa fa-chevron-down"></i></a>
-      <ul class="dropdown">
-        <li><a href="/spotify">Spotify Comparison Tool</a></li>
-        <li><a href="https://github.com/easter97/ColorSpot">ColorSpot</a></li>
-      </ul>
-    </li>
-    <div class=site-title>Amanda Easter</div>
-    <li><a routerLink='/about' routerLinkActive="is-active">About</a></li>
-    <li><a routerLink='/resume' routerLinkActive="is-active">Resume</a></li>
-  </ul>
+<nav role="navigation" class="desktop-header" [class.light]="isDarkMode">
+    <div class="nav-left-item icon">
+      <a href="https://www.linkedin.com/in/amanda-easter-b0656a103/" class="nav-left-link"><img title="Linkedin" src="{{ isDarkMode ? 'assets/images/linkedin-light.png' : 'assets/images/linkedin.png'}}" /></a>
+    </div>
+    <div class="nav-left-item icon">
+      <a href="https://github.com/easter97" class="nav-left-link"><img title="GitHub" src="{{isDarkMode ? 'assets/images/git-light.png' : 'assets/images/git.png'}}" /></a>
+    </div>
+  <div class="nav-line"></div>
+  <div class="nav-left-item long">
+    <a routerLink='/home' class="nav-left-link">home</a>
+  </div>
+  <div class="nav-left-item long">
+    <a routerLink='/projects' class="nav-left-link">projects</a>
+  </div>
+  <div class="nav-left-item long">
+    <a routerLink='/about' class="nav-left-link">about</a>
+  </div>
 </nav>
 
 <nav role="navigation" class="mobile-header">

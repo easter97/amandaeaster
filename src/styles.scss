@@ -1,28 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,600');
 @import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import './vars.scss';
 @import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
-$mauve: #c39aa5;
-$dark-pink:#ddaeae;
-$light-pink:#edc6bb;
-$baby: #fedcc8;
-$cream:#fef2dc;
-$baby-blue:#99c6d9;
-$dark-blue:#407290;
-$purple:#817985;
+@font-face {
+    font-family: Trinstam;
+    src: url(assets/fonts/Trinstam.ttf) format("truetype");
+  }
+@font-face {
+    font-family: NewYork;
+    src: url(assets/fonts/NewYork.otf) format("opentype");
+  }
+@font-face {
+    font-family: Leky;
+    src: url(assets/fonts/leky.otf) format("opentype");
+  }
 
 html,body,p{
     // font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    color: $charcoal;
+}
+body{
+    margin: 0px;
 }
 p{
-    font-size: 20px;
-    letter-spacing: 2px;
+    // margin: 0px;
+    letter-spacing: .5px;
+    margin: 0 auto 14px;
 }
 h1{
-    font-family: "Arvo", serif;
+    font-family: "Montserrat", serif;
 }
 .big-link{
     font-family: "Arvo", serif;
@@ -61,3 +71,110 @@ h1{
         transform: scale(1.25, 1.25);
     }
 }
+.dark-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:$charcoal;
+    z-index: 9999;
+    border: 1px solid rgba(236, 231, 225, .16);
+    box-shadow: 0 11px 13px rgba(0, 0, 0, .2);
+  }
+.light-loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+        background-color:#ece7e1;
+        z-index: 9999;
+        border: 1px solid rgba(236, 231, 225, .16);
+        box-shadow: 0 11px 13px rgba(0, 0, 0, .2);
+}
+  
+.fade {
+    opacity: 0;
+    filter: blur(20px);
+    transition: all 1s;
+  }
+  
+  .fade-revealed {
+    opacity: 1;
+    filter: blur(0px);
+  }
+
+  .slide-up{
+    animation: slide-up 1.5s cubic-bezier(0.65, 0, 0.35, 1) both
+  }
+  .slide-up-faster{
+    animation: slide-up 0.75s cubic-bezier(0.65, 0, 0.35, 1) both
+  }
+  
+@keyframes slide-up{
+  0%{
+    //   transform: translateY(100px)
+      transform: translate3d(0px, 175px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+  }
+    
+  100%{
+    //   transform: translateY(0)
+    transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    transform-style: preserve-3d;
+  }
+    
+}
+.parent-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: $cream;
+    &.dark{
+        background-color:$charcoal; 
+        color: $cream;
+    }
+    .wrapper{
+        max-width: 60vw;
+    }
+}
+.link-list{
+    font-family: Leky;
+    font-size: 4rem;
+    font-weight: 300;
+    line-height: 8rem;
+    text-transform: uppercase;
+    min-height: 60vh;
+    .item{
+        -moz-transition: padding .75s;
+        -webkit-transition: padding .75s;
+        -o-transition: padding .75s;
+        transition: padding .75s;
+        padding-bottom: 1rem;
+        padding-right: 2.5%;
+        &:hover{
+            font-style: italic;
+            padding-left: 2.5%;
+            padding-right: 0%;
+            cursor: pointer;
+        }
+    }
+}
+button{
+    background-color: $charcoal;
+    color: $cream;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    padding: 10px 60px;
+    font-family: Leky;
+    font-weight: 400;
+    transition: padding .25s ease-in-out;
+    &:hover{
+        padding: 10px 100px;
+    }
+}
+

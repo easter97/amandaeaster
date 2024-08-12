@@ -1,62 +1,85 @@
-$mauve: #c39aa5;
-$dark-pink:#ddaeae;
-$light-pink:#edc6bb;
-$baby: #fedcc8;
-$cream:#fef2dc;
-$baby-blue:#99c6d9;
-$dark-blue:#407290;
-$purple:#817985;
-.about-card{
-    margin:0 10% 0 10%;
-    display: flex;
-    flex-wrap: wrap;
-    background-color:$cream;
-    border-radius:12px 12px 0 0;
-    .landscape-photo{
-        height:250px;
-        width:316px;
-        margin:10px;
-    }
-    .title{
-        font-family: 'Arvo', serif;
-        font-size:40px;
-        text-align: center;
-    }
-    .content{
-        padding:20px;
-        p{
-            line-height: 35px;
-            text-align: justify;
-        }
-        flex:2;
-    }
-   
+@import '../../../vars.scss';
+h2{
+    font-family: Leky;
+    font-weight: 500;
+    letter-spacing: 3px;
 }
-.sub-content{
-    margin:0 10% 0 10%;
-    background-color: $cream;
-        border-radius: 0 0 12px 12px;
-        padding:15px;
+h1{
+    font-family: Leky;
+    font-weight: 500;
+    font-size: 6rem;
+    line-height: 12rem;
+    margin: 0px;
+}
+@keyframes zoom-in {
+    0% {
+      transform: scale(0, 0);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+.profile-img {
 
+    display: block;
+    position: absolute;
+    width: 40%;
+    margin-top: 5%;
+    margin-left: 0%;
+    margin-right: -10%;
+    top: 0%;
+    bottom: 0%;
+    left: auto;
+    right: 0%;
+    animation: zoom-in 2s ease;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+.title{
+    height: 12rem;
+    overflow: hidden;
+}
+.subtitle{
+    padding-bottom: 2%;
+    h2{
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 4rem;
+        text-shadow: 0 0 5px $cream;
+    }
+    position: relative;
+    z-index: 9;
+}
+.section-left.section-long {
+    width: 100%;
+    height: auto;
+    max-width: 768px;
+    padding-top: 10%;
+    padding-bottom: 12%;
+    position: relative;
+}
+.content{
+    font-weight: 400;
+    line-height: 1.9em;
     p{
-        line-height: 35px;
         text-align: justify;
+        margin-bottom: 2rem;
     }
 }
-
-@media only screen and (max-width: 600px) {
-    .about-card{
-        margin:0 3% 0 3%;
-        .content{
-            p{
-                text-align: left;
-            }
-        }
+h3{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-family: Leky;
+    letter-spacing: 4px;
+}
+.skills{
+    p{
+        line-height: 2rem;
     }
-    .sub-content{
-        margin:0 3% 0 3%;
-        p{
-            text-align: left;
-        }
-    }
+}
+.skills, .experience{
+    padding-top: 3rem;
 }

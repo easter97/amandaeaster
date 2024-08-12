@@ -1,11 +1,4 @@
-$mauve: #c39aa5;
-$dark-pink:#ddaeae;
-$light-pink:#edc6bb;
-$baby: #fedcc8;
-$cream:#fef2dc;
-$baby-blue:#99c6d9;
-$dark-blue:#407290;
-$purple:#817985;
+@import '../../../vars.scss';
 .project{
     display: flex;
     flex-wrap: wrap;
@@ -74,5 +67,78 @@ $purple:#817985;
             margin:auto;
         }
         
+    }
+}
+
+.container{
+    display: flex;
+    align-items: center;
+  justify-content: space-evenly;
+//   flex-wrap: wrap;
+  min-height: 100vh;
+    padding-left: 65px;
+    
+    .info{
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.9em;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        min-height: 60vh;
+        align-items: flex-start;
+        justify-content: flex-end;
+        p{
+            color: $cream;
+        }
+        .name{
+            // height: 50px;
+            overflow: hidden;
+        }
+        .title, .current{
+            overflow: hidden;
+            // height: 50px;
+        }
+
+        h1{
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: 500;
+        }
+    }
+    .link-list{
+        padding-bottom: 2%;
+        font-size: 3.5vw;
+        line-height: 7vw;
+        .nav-sub {
+            grid-column-gap: 8px;
+            grid-row-gap: 8px;
+            margin-top: -18px;
+            margin-bottom: 24px;
+            display: flex;
+        }
+        .role {
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            align-self: flex-end;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 16px;
+            font-family: Montserrat;
+        }
+        .badge {
+            background-color: var(--offwhite);
+            color: var(--charcoal);
+            border-radius: 20px;
+            align-self: center;
+            padding: 0 8px;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 20px;
+        }
+        .w-condition-invisible {
+            display: none !important;
+        }
     }
 }

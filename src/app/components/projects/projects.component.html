@@ -1,24 +1,21 @@
-<div class=project-list>
-    <div class=project>
-        <img class=project-icon src="../../../assets/images/spotify.png">
-        <div class=project-content>
-            <div class=project-title>Spotify Comparison</div>
-            <div class=description>
-                This Angular app is designed to allow Spotify users to compare their playlist with another Spotify user's to determine how similar the music tastes are.
-                <a class=project-link href="/spotify"><i class="fa fa-angle-right" aria-hidden="true"></i> Project Link</a>
-                <a class=project-link href="https://github.com/easter97/spotify-comparison"><i class="fa fa-angle-right" aria-hidden="true"></i> Repository</a>
-            </div>
-        </div>
-    </div>
+<div [@pageLoaderAnimation]="showLoader ? 'visible' : 'hidden'" class="light-loader"></div>
+<div class="parent-container dark">
+    <div class=container>
+        <div class=info>
+            <div class=name><h1 [ngClass]="showLoader ? '' : 'slide-up-faster'">Amanda Easter</h1></div>
+                <div class=title><p [ngClass]="showLoader ? '' : 'slide-up'">Software & Web Developer / Computer Science Engineer</p></div>
+                <div class=current><p [ngClass]="showLoader ? '' : 'slide-up'">Currently working full time as a Senior Software Developer at Turnitin</p></div>
 
-    <div class=project>
-        <img class=project-icon src="../../../assets/images/ColorSpot Logo.png">
-        <div class=project-content>
-            <div class=project-title>ColorSpot <span class=collaborative>collaborative</span></div>
-            <div class=description>
-                This application is designed to assist users that suffer from color blindness by providing a tool for color identification on macOS. Users can hover their mouse on the screen and a color is determined from a range of RGB values.
-                <a class=project-link href="https://github.com/easter97/ColorSpot"><i class="fa fa-angle-right" aria-hidden="true"></i> Repository</a>
-            </div>
+        </div>
+        <div class="link-list fade" [class.fade-revealed]="!showLoader">
+            <div class=item [routerLink]="['/projects', 'color-spot']">Spotify Comparison</div>
+            <div class="nav-sub"><div class="role">– Angular, Spotify API</div><div class="badge w-condition-invisible">NEW</div></div>
+            <div class=item routerLink='/projects'>Sportify</div>
+            <div class="nav-sub"><div class="role">– Angular, Spotify API</div><div class="badge w-condition-invisible">NEW</div></div>
+            <div class=item routerLink='/about'>Color Spot</div>
+            <div class="nav-sub"><div class="role">– Objective C, Mac OS</div><div class="badge w-condition-invisible">NEW</div></div>
+
         </div>
     </div>
 </div>
+
