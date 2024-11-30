@@ -2,17 +2,19 @@
 <div class="parent-container dark">
     <div class=container>
         <div class=info>
-            <div class=name><h1 [ngClass]="showLoader ? '' : 'slide-up-faster'">Amanda Easter</h1></div>
-                <div class=title><p [ngClass]="showLoader ? '' : 'slide-up'">Software & Web Developer / Computer Science Engineer</p></div>
-                <div class=current><p [ngClass]="showLoader ? '' : 'slide-up'">Currently working full time as a Senior Software Developer at Turnitin</p></div>
+            <div class=name><h1 [ngClass]="showLoader ? '' : 'slide-up-faster'">Projects</h1></div>
+                <div class=current><p [ngClass]="showLoader ? '' : 'slide-up'">Personal projects give me a creative space to explore new ideas and try new technologies.</p></div>
+                <div class=title><p [ngClass]="showLoader ? '' : 'slide-up'">These are some of the projects I'm most proud of and excite me the most.</p></div>
 
         </div>
         <div class="link-list fade" [class.fade-revealed]="!showLoader">
-            <div class=item [routerLink]="['/projects', 'color-spot']">Spotify Comparison</div>
+            <div class=item routerLink="/projects/goodbooks">GoodBooks</div>
+            <div class="nav-sub"><div class="role">– Angular, Goodreads, OpenLibrary API</div><div class="badge">NEW</div></div>
+            <div class=item routerLink="/projects/comparison">Spotify Comparison</div>
             <div class="nav-sub"><div class="role">– Angular, Spotify API</div><div class="badge w-condition-invisible">NEW</div></div>
-            <div class=item routerLink='/projects'>Sportify</div>
+            <div class=item routerLink="/projects/sportify">Sportify</div>
             <div class="nav-sub"><div class="role">– Angular, Spotify API</div><div class="badge w-condition-invisible">NEW</div></div>
-            <div class=item routerLink='/about'>Color Spot</div>
+            <div class=item routerLink="/projects/colorspot">Color Spot</div>
             <div class="nav-sub"><div class="role">– Objective C, Mac OS</div><div class="badge w-condition-invisible">NEW</div></div>
 
         </div>

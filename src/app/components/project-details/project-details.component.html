@@ -1,1 +1,8 @@
-<div *ngIf="projectContent" [innerHTML]="projectContent"></div>
+<div class=parent-container>
+    <div class=wrapper>
+        <div class=project-title [@pageLoaderAnimation]="showLoader ? 'visible' : 'hidden'">
+            <div class=title-wrap><h1 [ngClass]="showLoader ? '' : 'slide-up-large'">{{project}}</h1></div>
+        </div>
+        <div *ngIf="projectContent" [innerHTML]="projectContent | safeHtml" class="project-content"></div>
+    </div>
+</div>

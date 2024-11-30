@@ -20,7 +20,6 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ]
 })
 export class ProjectsComponent implements OnInit {
-project;
   constructor() { }
 
   showLoader = true;

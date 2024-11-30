@@ -77,7 +77,7 @@
 //   flex-wrap: wrap;
   min-height: 100vh;
     padding-left: 65px;
-    
+    width: 100%;
     .info{
         font-size: 13px;
         font-weight: 400;
@@ -111,6 +111,7 @@
         padding-bottom: 2%;
         font-size: 3.5vw;
         line-height: 7vw;
+        margin-left: 5rem;
         .nav-sub {
             grid-column-gap: 8px;
             grid-row-gap: 8px;
@@ -128,14 +129,15 @@
             font-family: Montserrat;
         }
         .badge {
-            background-color: var(--offwhite);
-            color: var(--charcoal);
+            background-color: $cream;
+            color: $charcoal;
             border-radius: 20px;
             align-self: center;
             padding: 0 8px;
             font-size: 11px;
             font-weight: 600;
             line-height: 20px;
+            font-family: Montserrat;
         }
         .w-condition-invisible {
             display: none !important;
