@@ -1,0 +1,34 @@
+<div class=project-desc>
+    <h2>GoodBooks is a proof of concept I am working on that allows Goodreads users to import their library and view their shelves in a more aesthetically pleasing way.</h2>
+    <img class=project-image src="../../../assets/goodbooks/shelf.png"/>
+    <p>Despite Goodreads effectively being sunsetted in features and support, it's still by far the most popular platform I've observed people use to log and organize books and share reading progress and goals in a social way. Although I'm a fan of a lot of the convience of digital libraries, sometimes one can't help but long for the time when your bookshelf would grow heavy with all the books you had enjoyed or had yet to read. This application seeks to recreate that sense of accomplishment by watching your digital bookshelf grow, as well as options to customize the look and feel of your digital library.</p>
+</div>
+<div class="section challenges">
+    <h3>Challenges</h3>
+    <p>To begin with, Goodreads' offical API has been out of commission for years. Fortunately, there is still an option available to export your library data. This gives users a CSV of all the books that are in their library, with information like what 'shelf' they belong to (read, to read, etc.) and book data such as ISBN and genre. I was able to download my own data to use as the template for development. Since backend development isn't really my style, I created a mock JSON server within my angular project that would allow me to hit endpoints and return data from the Goodreads file. The long-term goal would be to create a server in which users can upload their Goodreads data once and then manipulate it as they see fit.</p>
+    <p>Additionally, the library download from Goodreads didn't contain any information on the cover art for each title. I really wanted this collection to feel like a digital representation of a very real library, so getting cover art important to that look and feel. I utilized the <a href=https://openlibrary.org/dev/docs/api/covers>Open Library API</a> to retrieve any available covert art for a book by passing in the ISBN-<span class="number">13</span> number that was provided in the Goodreads data. While this works fairly well with older titles, I did notice some of the newer works didn't have art readily available. Those books get randomly assigned a hex code from my pallete and display the title on the face.</p>
+
+</div>
+<div class="section ui">
+    <h3>Interface & UI</h3>
+    <img class=project-image src="/assets/goodbooks/shelf-animation.gif" />
+    <p>Once I had cover art the library really started to come together, but if the appeal to the project is that it looks more seamless, cozy, and alluring than your Goodreads shelf, I needed more than just the artwork to make that happen. I found a tool called <a href="https://lokeshdhakar.com/projects/color-thief/">ColorThief</a> that allowed me to sample colors from my image and find the most dominant color (the one that appeared the most) from the pallete. This is the color I used for the spine of the book to get that coheisive, matching feel. I also used a function to grab the color with the most contrast from the pallete ColorThief generated from the cover art image. I used that color for the title and author name on the spine of the book.</p>
+</div>
+<div class="section">
+    <h3>More to Come</h3>
+    <img class=project-image src="/assets/goodbooks/shelf-animation.gif" />
+    <p>While it's exciting enough to get the initial POC up and running, I definitely have big plans for this application. </p>
+    <h4>Future Features</h4>
+    <ul>
+        <li>Allow the user to add custom objects to their library and rearrange via drag and drop</li>
+        <li>Add a pet to your library</li>
+        <li>Different shelving textures and options</li>
+        <li>Support for seasonal items</li>
+    </ul>
+</div>
+<div class="section repo">
+    <h2>Check it out.</h2>
+    <button>
+        <a href="https://github.com/easter97/goodbooks">GoodBooks Repository</a>
+    </button>
+</div>
