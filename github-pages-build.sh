@@ -3,7 +3,7 @@
 # Build Angular app for production
 echo 'Building Angular app for production...'
 
-ng build --prod --base-href ./
+ng build --configuration production --base-href ./
 
 # Navigate to the 'docs' directory
 cd docs
@@ -22,14 +22,14 @@ cd -
 #copy the spotify side project from its dist folder
 
 # Create a new directory named 'spotify' within the 'docs' folder of the 'amandaeaster' project
-mkdir -p docs/spotify
+# mkdir -p docs/spotify
 
 # Navigate to the Spotify side project's dist folder
-cd ../../spofity-comparison/dist/spotify-comparison
+# cd ../../spofity-comparison/dist/spotify-comparison
 
 # Copy all contents of the 'dist' folder into the newly created 'spotify' directory
-echo 'Copying Spotify Conversion Code...'
-cp -r * ../../../amandaeaster/amandaeaster/docs/spotify
+# echo 'Copying Spotify Conversion Code...'
+# cp -r * ../../../amandaeaster/amandaeaster/docs/spotify
 
 # Optionally, navigate back to the original directory
-cd -
+# cd -
