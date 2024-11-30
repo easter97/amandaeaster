@@ -28,7 +28,7 @@ export class HeaderComponent {
   }
 
   checkDarkMode() {
-    let element = document.querySelector('.parent-container.dark');
+    let element = document.querySelector('.parent-container.dark') || document.querySelector('.parent-container.mobile-dark');
     console.log(element)
     this.isDarkMode = !!element;
   }

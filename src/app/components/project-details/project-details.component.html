@@ -1,4 +1,4 @@
-<div class=parent-container>
+<div class=parent-container [ngClass]="{'mobile-dark': isMobile}">
     <div class=wrapper>
         <div class=project-title [@pageLoaderAnimation]="showLoader ? 'visible' : 'hidden'">
             <div class=title-wrap><h1 [ngClass]="showLoader ? '' : 'slide-up-large'">{{project}}</h1></div>

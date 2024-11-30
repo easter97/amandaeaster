@@ -17,12 +17,24 @@
   </div>
 </nav>
 
-<nav role="navigation" class="mobile-header">
-  <div class=site-title>Amanda Easter</div>
-  <div class=links>
-    <a class=big-link routerLink='/home' routerLinkActive="is-active"><div class="streak orange"></div>Home</a>
-    <a class=big-link routerLink='/projects' routerLinkActive="is-active"><div class="streak mauve"></div>Projects</a>
-    <a class=big-link routerLink='/about' routerLinkActive="is-active"><div class="streak blue"></div>About Me</a>
-    <a class=big-link routerLink='/resume' routerLinkActive="is-active"><div class="streak orange"></div>Resume</a>
+<nav role="navigation" class="mobile-header" [class.light]="isDarkMode">
+
+<div class="nav-left-item long">
+  <a routerLink='/home' class="nav-left-link">home</a>
 </div>
+<div class="nav-left-item long">
+  <a routerLink='/projects' class="nav-left-link">projects</a>
+</div>
+<div class="nav-left-item long">
+  <a routerLink='/about' class="nav-left-link">about</a>
+</div>
+<span class=line-wrapper>
+  <div class="nav-left-item icon">
+    <a href="https://www.linkedin.com/in/amanda-easter-b0656a103/" class="nav-left-link"><img title="Linkedin" src="{{ isDarkMode ? 'assets/images/linkedin-light.png' : 'assets/images/linkedin.png'}}" /></a>
+  </div>
+  <div class="nav-line"></div>
+  <div class="nav-left-item icon">
+    <a href="https://github.com/easter97" class="nav-left-link"><img title="GitHub" src="{{isDarkMode ? 'assets/images/git-light.png' : 'assets/images/git.png'}}" /></a>
+  </div>
+</span>
 </nav>

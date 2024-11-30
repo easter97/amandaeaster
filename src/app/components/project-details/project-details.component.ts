@@ -1,4 +1,4 @@
-import { Component, Pipe, PipeTransform } from '@angular/core';
+import { Component, Pipe, PipeTransform, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { trigger, state, style, transition, animate } from '@angular/animations';
@@ -37,6 +37,17 @@ export class ProjectDetailsComponent {
   projectContent: string | null = null;
   showLoader = true;
   project;
+  isMobile: boolean = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.checkIfMobile();
+  }
+
+  checkIfMobile() {
+    this.isMobile = window.innerWidth <= 768;
+  }
+
 
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
 
@@ -48,6 +59,7 @@ export class ProjectDetailsComponent {
     setTimeout(() => {
       this.showLoader = false; // Trigger the animation after the timeout
     }, 500); // 1 second delay before starting the animation
+    this.checkIfMobile();
   }
 
   loadProjectContent(projectId: string) {

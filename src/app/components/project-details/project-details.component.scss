@@ -94,3 +94,21 @@
          }
      }
 }
+
+@media only screen and (max-width: 768px) {
+    .project-title{
+        h1{
+            font-size: 35px;
+        }
+    }
+    .project-content{
+        margin-bottom: 5rem;
+        ::ng-deep{
+
+             p, ul{
+                 max-width: unset;
+             }
+        }
+    }
+
+}
