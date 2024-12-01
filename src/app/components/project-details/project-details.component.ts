@@ -9,7 +9,6 @@ import { DomSanitizer } from '@angular/platform-browser'
 export class SafeHtmlPipe implements PipeTransform  {
   constructor(private sanitized: DomSanitizer) {}
   transform(value) {
-    console.log(this.sanitized.bypassSecurityTrustHtml(value))
     return this.sanitized.bypassSecurityTrustHtml(value);
   }
 }
@@ -63,7 +62,6 @@ export class ProjectDetailsComponent {
   }
 
   loadProjectContent(projectId: string) {
-    console.log(projectId)
     const filePath = `./assets/${projectId}/${projectId}.html`;
     this.http.get(filePath, { responseType: 'text' })
       .subscribe(

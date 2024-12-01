@@ -1,0 +1,25 @@
+<div class=project-desc>
+    <h2>This application is designed to assist users that suffer from color blindness by providing a tool for color identification on macOS.</h2>
+    <img class=project-image src="../../../assets/colorspot/ColorSpot.png"/>
+    <p>ColorSpot is a project I worked on in my Human-Computer Interaction class in college. My friend and I forked a software that implemented the eyedropper and color sampling functionality, and added our own logic layer on top to identify and name these colors to the user.</p>
+</div>
+<div class="section ui">
+    <h3>The Idea</h3>
+    <p>My father is red-green colorblind and often struggles to read and understand charts and data when using his computer. There's a finite set of colors and patterns that can be used and clearly identified by colorblind users, and often software doesn't provide any checking or accessible colors by default. The idea behind ColorSpot was that while a chart wouldn't become visually distinguishable to a user through the software, it would allow colorblind people to identify what color was being sampled (let's say from a legend) and then they could use this information to match the corresponding color value in the chart.</p>
+    <p>The beauty of ColorSpot is that while users could accomplish this by comparing the HEX/RGB values of the sampled colors, a lot of people aren't familiar with those values and they don't correspond to our layman understanding of color values. ColorSpot actually categorizes and identifies these values with traditional color families like "Blue" or "Purple," which allows users to communicate the data with non-colorblind users without using color codes.</p>
+    <p>Say for example you're in a company meeting and a coworker is presenting their line graph of quarterly sales. Colorblind users can now follow along with ColorSpot by sampling the legend colors for the data - let's say the month of January - and identify which line on the graph corresponds to January sales. They can then engage in conversation and questions using the colors ColorSpot has identified to them. "Is this blue line inclusive of online sales?" ColorSpot gives users the context they need to understand and communicate concepts that might have previously been confusing or off-limits to them.</p>
+</div>
+<div class="section challenges">
+    <h3>Identifying Colors</h3>
+    <p>The logic for identifying the sampled colors was trickier than we anticipated it to be. We broke each sample down into it's RGB levels and used thresholds to determine at what point a color "belonged" to a family of colors. This is simple enough with our primary colors, but when we start to sample colors like purples and oranges it becomes more difficult to set a clear threshold since these colors are born from a combination of two colors and not just a majority of one RGB value.</p>
+    <p>Grays and blacks also presented their own challenges since the RGB values were less relevant. A black that is more red than green is still black to the average eye. We had to include checking for hues and comparisons for the RGB values over a certain threshold and within a certain threshold of each other. </p>
+    <p>I could probably spend even more time beefing up the color identification logic and still miss some of the subtleties and nuances contained in the rainbow. At the end of the day, the goal was to be as close as possible and provide helpful context to the user. If we identify a maroon color to the user as red, we're still providing useful information even if discourse ensues on whether the color is more purple than red.</p>
+
+</div>
+
+<div class="section repo">
+    <h2>Check it out.</h2>
+    <button>
+        <a href="https://github.com/easter97/ColorSpot">ColorSpot Repository</a>
+    </button>
+</div>
