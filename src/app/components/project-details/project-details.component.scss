@@ -13,7 +13,7 @@
     }
     h1{
         font-family: Leky;
-        font-size: 8rem;
+        font-size: 7rem;
         font-weight: 400;
     }
 }
@@ -112,4 +112,11 @@
         }
     }
 
+}
+@media only screen and (min-width: 600px) and (max-width: 1024px){
+    .project-title{
+        h1{
+            font-size: 65px;
+        }
+    }
 }

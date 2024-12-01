@@ -3,6 +3,10 @@ h2{
     font-family: Leky;
     font-weight: 500;
     letter-spacing: 3px;
+    .punc{
+        font-size: 48px;
+        font-family: NewYork;
+    }
 }
 h1{
     font-family: Leky;
@@ -23,7 +27,8 @@ h1{
 
     display: block;
     position: absolute;
-    width: 40%;
+    // width: 40%;
+    max-height: 300px;
     margin-top: 5%;
     margin-left: 0%;
     margin-right: -10%;
@@ -94,3 +99,37 @@ h3{
 .experience{
     padding-top: 3rem;
 }
+
+@media only screen and (max-width: 768px) {
+    .wrapper{
+        padding-top: 110px;
+        box-sizing: border-box;
+        max-width: 90%;
+    }
+    .profile-img{
+        position: unset;
+        margin-bottom: 5%;
+        margin-right: unset;
+    }
+    .about-header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .title{
+        h1{
+            font-size: 50px;
+        }
+    }
+    .subtitle{
+        h2{
+            font-size: 20px;
+            text-align: center;
+        }
+        .punc{
+            font-size: 35px;
+        }
+    }
+}
+
