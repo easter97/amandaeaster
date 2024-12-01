@@ -1,0 +1,29 @@
+<div class=project-desc>
+    <h2>Comparify allows Spotify users to see what songs, genres, and artists they have in common.</h2>
+    <img class=project-image src="../../../assets/comparify/results.png"/>
+    <p>One of the first months after I started my first job out of college, I had a coworker mention he enjoyed music from the band Half Life. I had heard this band before and quite liked them too. Come to find out, they had been in our city on tour and he had elected not to go to their concert because he didn't have anyone to go with. If only we had known!</p>
+</div>
+<div class="section challenges">
+    <h3>Enter Comparify</h3>
+    <p>Thus, the idea for Comparify was born. At its conception, the application was supposed to identify what bands a user had in common with another and recommend upcoming concerts in the specified area. As I worked on the application it became more of an analysis of each users library, identifying common songs and genres in addition to artists. Eventually, I also added the ability to generate a playlist based on all common songs between users.</p>
+
+</div>
+<div class="section ui">
+    <h3>Interface & UI</h3>
+    <img class=project-image src="/assets/comparify/playlist.png" />
+    <p>Sampling a user's entire libary, aside from being a gargantuan task, didn't seem like the best course of action for comparing user taste. While it might be nice to know that you have "<span class=number>12</span> hours uninterrupted brown noise" in common with your friend, it wasn't what I was going for here. I decided to allow users to select playlists from which to sample their tastes. Ideally, we're letting a bit of self-selection happen here because it's safe to assume people will generally know what type of music they suspect or would like to have in common.</p>
+    <img class=project-image src="/assets/comparify/songs.png" />
+    <p>After the playlist selection is complete, Comparify gets to work analyzing the provided data set. Common artists are artists both users had on their playlist, but perhaps didn't have the exact same songs from this artist. Top genres was populated by using the genre field from Spotify API. As we parse through the songs for each user, we add the genres to an array. Genres that appear in both user arrays get displayed on the results page. Lastly, common songs are songs that were included in both user's provided sample set.</p>
+</div>
+<div class="section challenges">
+    <h3>Challenges</h3>
+    <p>The Spotify API has become a bit of a moving target, and since I haven't picked this project up in a while I'm not sure that all of the endpoints still respond as expected (if not deprecated). Spotify also introduced their Duo feature that allows users to generate a playlist from two Spotify users. I still think Comparify brings some novel functionality to the table by identifying specifically what artist, genres, and specific songs users both enjoy, but I did enjoy how Spotify's implementation also included music that both users were likely to enjoy that was not necessarily included in both or either user's library. It would be interesting as a future feature to implement recommendations into Comparify's analysis, but as of writing this the recommendations endpoint for the Spotify API has been deprecated. We'll see if we get some interesting tools down the road to make this happen.</p>
+    <p>As always, I'll include the obligatory asterisk on this project that using a backend or microservices layer would make this application much cleaner and smoother. Since I'm not a back end developer and this application was never expected to handle a ton of hits to the API, the front end implementation works just fine.</p>
+
+</div>
+<div class="section repo">
+    <h2>Check it out.</h2>
+    <button>
+        <a href="https://github.com/easter97/spotify-comparison">Comparify Repository</a>
+    </button>
+</div>
