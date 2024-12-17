@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get the list of commit hashes since the last push
-commit_hashes=($(git log origin/main..HEAD --format="%h"))
+commit_hashes=($(git log origin/master..HEAD --format="%h"))
 
 # Check if there are any new commits since the last push, if not we can exit because we don't need to build
 if [ ${#commit_hashes[@]} -eq 0 ]; then
