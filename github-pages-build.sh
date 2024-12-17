@@ -1,5 +1,23 @@
 #!/bin/bash
 
+# Get the list of commit hashes since the last push
+commit_hashes=($(git log origin/main..HEAD --format="%h"))
+
+# Check if there are any new commits since the last push, if not we can exit because we don't need to build
+if [ ${#commit_hashes[@]} -eq 0 ]; then
+    commit_message="Deploy build"
+elif [ ${#commit_hashes[@]} -eq 1 ]; then
+    # Only one commit since last push
+    commit_message="Deploy build for ${commit_hashes[0]}"
+else
+    # Extract the first and last commit hashes
+    first_commit="${commit_hashes[0]}"
+    last_commit="${commit_hashes[${#commit_hashes[@]}-1]}"
+
+    # Construct the commit message
+    commit_message="Deploy build for [${first_commit}...${last_commit}]"
+fi
+
 # Build Angular app for production
 echo 'Building Angular app for production...'
 
@@ -19,17 +37,9 @@ echo 'amandaeaster.com' > CNAME
 # Optional: Navigate back to the original directory
 cd -
 
-#copy the spotify side project from its dist folder
+# Commit and push with the generated message
+git add .
+git commit -m "$commit_message"
+git push
 
-# Create a new directory named 'spotify' within the 'docs' folder of the 'amandaeaster' project
-# mkdir -p docs/spotify
-
-# Navigate to the Spotify side project's dist folder
-# cd ../../spofity-comparison/dist/spotify-comparison
-
-# Copy all contents of the 'dist' folder into the newly created 'spotify' directory
-# echo 'Copying Spotify Conversion Code...'
-# cp -r * ../../../amandaeaster/amandaeaster/docs/spotify
-
-# Optionally, navigate back to the original directory
-# cd -
+echo "Commits deployed with message: $commit_message"

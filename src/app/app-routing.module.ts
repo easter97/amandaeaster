@@ -6,6 +6,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AboutComponent } from './components/about/about.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectDetailsComponent } from './components/project-details/project-details.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'about', component: AboutComponent},
   {path:'projects', component: ProjectsComponent},
   { path: 'projects/:projectId', component: ProjectDetailsComponent },
+  {path:'wishlist', component: WishlistComponent},
   {path: '404', component:NotFoundComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },  // Wildcard route for a 404 page
